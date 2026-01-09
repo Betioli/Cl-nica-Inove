@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pilates, fisioterapia e cuidados corporais em Ribeirão Preto. Aqui você respira, solta e volta a se sentir leve.">
     <link rel="icon" href="favicon.ico" type="image/logo-clinica.png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Clínica Inove - Estúdio de Movimento e Leveza</title>
 
     <style>
@@ -29,6 +28,7 @@
             src: url('fonts/Montserrat-Bold.woff2') format('woff2');
             font-weight: 700;
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body { font-family: 'Montserrat', sans-serif; color: #4A4A4A; background: #FFF; line-height: 1.7; overflow-x: hidden; }
@@ -38,13 +38,16 @@
         h3 { font-size: clamp(20px, 2.5vw, 24px); font-weight: 500; }
         p { font-size: 18px; line-height: 1.7; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 80px; }
+                
         @media (max-width: 768px) { .container { padding: 0 24px; } }
-        
-        header { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid rgba(117,47,146,0.08); transition: all 0.3s; }
+        .logo img { height: 68px; }
+        .logo a { font-family: 'Cormorant', serif; font-size: 30px; font-weight: light; color: #752F92; margin-left: 5px; vertical-align: 40% ; }
+        header { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 2px solid #752F92; transition: all 0.3s; }
         header.scrolled { box-shadow: 0 4px 24px rgba(117,47,146,0.08); }
         nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 80px; }
+        
         @media (max-width: 768px) { nav { padding: 16px 24px; } }
-        .logo { background: url('image/logo-clinica.png'); background-size: contain; background-repeat: no-repeat; width: 120px; height: 40px; font-size: 24px; font-weight: 700; color: #752F92; text-decoration: none; }
+        .logo { width: auto;} /* Ajuste aqui se necessário */
         .nav-links { display: flex; gap: 32px; list-style: none; }
         .nav-links a { color: #4A4A4A; text-decoration: none; font-size: 16px; font-weight: 500; transition: color 0.3s; position: relative; }
         .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: #752F92; transition: width 0.3s; }
@@ -52,6 +55,7 @@
         .nav-links a:hover::after { width: 100%; }
         .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
         .menu-toggle span { display: block; width: 24px; height: 2px; background: #752F92; margin: 5px 0; transition: all 0.3s; }
+        
         @media (max-width: 768px) {
             .nav-links { position: fixed; top: 72px; right: -100%; flex-direction: column; background: rgba(255,255,255,0.98); backdrop-filter: blur(10px); width: 100%; padding: 32px 24px; gap: 24px; transition: right 0.3s; box-shadow: 0 8px 32px rgba(117,47,146,0.12); }
             .nav-links.active { right: 0; }
@@ -194,7 +198,7 @@
 <body>
     <header id="header">
         <nav class="container">
-            <div href="index.html" class="logo"> <span> <img src="image/logo-clinica.png" alt="Inove Logo"></span></div>
+            <div class="logo"> <span> <img src="image/logo-clinica.png" alt="Inove Logo"></span> <a>CLÍNICA INOVE</a></div>
             <div class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="pilates.html">Pilates</a></li>
