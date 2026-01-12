@@ -112,7 +112,7 @@
         .card h3 { margin-bottom: 16px; color: #752F92; }
         .card p { font-size: 16px; color: #5A5A5A; }
 
-        .servicos { background: #FFF; padding: 96px 0; padding-left: 40px; padding-right: 40px; }
+        .servicos { background: #FFF; padding: 96px 0; padding-left: 40px; padding-right: 40px; height: 100vh; }
         .servicos-grid {
             display: grid; /* Alterado de flex para grid */
             grid-template-columns: repeat(4, 1fr);
@@ -138,15 +138,7 @@
         }
         .servico-card.visible { animation: scaleIn 0.6s ease-out forwards; }
         @keyframes scaleIn { to { opacity: 1; transform: scale(1); } }
-        /* Pilates card ocupa toda a primeira linha */
-        /*.servico-card:first-child {
-            grid-column: 1 / span 3;
-            min-height: 380px;
-            flex-direction: column;
-        }*/
-        /*.servico-card:not(:first-child) {
-            grid-row: 2 / 3;
-        }*/
+        
         @media (max-width: 1100px) {
             .servicos-grid {
                 grid-template-columns: 1fr;
@@ -202,11 +194,12 @@
         .servico-link:hover { gap: 12px; }
         .servico-link svg { width: 20px; height: 20px; }
         
-        .sobre { background: linear-gradient(135deg, #FAF9F7 0%, #FFF 100%); padding: 96px 0; }
-        .sobre-content { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+        .sobre { background: linear-gradient(135deg, #FAF9F7 0%, #FFF 100%); padding: 46px 0; border: 1px solid red; }
+        .sobre-content { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
         @media (max-width: 768px) { .sobre-content { grid-template-columns: 1fr; gap: 32px; } }
-        .sobre-text h2 { margin-bottom: 24px; color: #752F92; }
-        .sobre-text p { margin-bottom: 20px; font-size: 18px; line-height: 1.8; }
+        .sobre-text h2 { font-weight: 700; margin-bottom: 24px; color: #752F92; font-size: 40px; }
+        .sobre-text p { margin-bottom: 20px; font-size: 20px; line-height: 1.8; }
+        .sobre-text a { margin-bottom: 20px; font-size: 20px; line-height: 1.8; }
         .sobre-image { position: relative; }
         .sobre-blob { position: absolute; top: -20px; right: -20px; width: 100%; height: 100%; background: rgba(117,47,146,0.08); border-radius: 50% 40% 60% 50%; z-index: 0; animation: blobFloat 6s ease-in-out infinite; }
         @keyframes blobFloat { 0%, 100% { border-radius: 50% 40% 60% 50%; } 50% { border-radius: 40% 60% 50% 40%; } }
@@ -552,11 +545,12 @@
         <div class="container">
             <div class="sobre-content">
                 <div class="sobre-text animate-on-scroll">
-                    <h2>Cuidado que você sente na pele</h2>
-                    <p>Na Inove, você não é só mais um paciente.</p>
-                    <p>Aqui o atendimento é individual, atencioso e feito especialmente para você.</p>
-                    <p>Cada sessão é pensada no que o seu corpo está pedindo naquele momento.</p>
-                    <p>Sem pressa. Sem protocolo frio. Só cuidado de verdade.</p>
+                    <h2>TREINAR CONOSCO É A SUA MELHOR ESCOLHA!</h2>
+                    <a>Na Inove, você não é só mais um paciente.<br>
+                    Aqui o atendimento é individual, atencioso e feito especialmente para você. </a><br><br>
+                    <p>Cada sessão dura 55 min e é limitada a apenas <strong>3 alunos por aula</strong> deixando o atendimento mais personalizado e bem intimista, é o espaço ideal para você trazer mais <strong>2 pessoas que você ama e quer ver bem.</strong><br><br>
+                    Você fortalece, alonga e reorganiza o corpo de forma equilibrada, aprendendo a se mover com mais controle, leveza e segurança no dia a dia.</p>
+                    
                 </div>
                 <div class="sobre-image animate-on-scroll">
                     <div class="sobre-blob"></div>
@@ -566,6 +560,7 @@
         </div>
     </section>
 
+    
     <section class="depoimentos">
         <div class="container">
             <div class="section-title animate-on-scroll">
