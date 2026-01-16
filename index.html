@@ -27,16 +27,48 @@
             font-family: 'Montserrat';
             src: url('fonts/Montserrat-Bold.woff2') format('woff2');
             font-weight: 700;
+        }   
+        @font-face {
+            font-family: 'Aventi-Bold';
+            src: url('fonts/Aventi-Bold.woff2') format('woff2');
+            font-weight: bold;
         }
+        @font-face {
+            font-family: 'Cormorant';
+            src: url('fonts/Cormorant-light.woff2') format('woff2');
+            font-weight: 300;
 
+        }
+        @font-face{
+            font-family: 'cormorant';
+            src: url('fonts/CormorantSC-Regular.woff2') format('woff2');
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: 'Cormorant';
+            src: url('fonts/Cormorant-Medium.woff2') format('woff2');
+            font-weight: 500;
+
+        }
+        @font-face{
+            font-family: 'cormorant';
+            src: url('fonts/CormorantSC-Semibold.woff2') format('woff2');
+            font-weight: 600;
+        }
+        @font-face {
+            font-family: 'Cormorant';
+            src: url('fonts/Cormorant-Bold.woff2') format('woff2');
+            font-weight: 700;
+
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body { font-family: 'Montserrat', sans-serif; color: #4A4A4A; background: #FFF; line-height: 1.7; overflow-x: hidden; }
-        h1, h2, h3 { font-weight: 400; color: #2A2A2A; line-height: 1.2; }
+        /*h1, h2, h3 { font-weight: 400; color: #2A2A2A; line-height: 1.2; }
         h1 { color: #fff; font-size: clamp(36px, 5vw, 56px); letter-spacing: -0.02em; }
         h2 { font-size: clamp(32px, 4vw, 40px); letter-spacing: -0.01em; }
         h3 { font-size: clamp(20px, 2.5vw, 24px); font-weight: 500; }
-        p { font-size: 18px; line-height: 1.7; }
+        p { font-size: 18px; line-height: 1.7; }*/
         .container { max-width: 2200px; margin: 0 auto; padding: 0 80px; }
                 
         @media (max-width: 768px) { .container { padding: 0 6px; } }
@@ -112,17 +144,19 @@
         .card h3 { margin-bottom: 16px; color: #752F92; }
         .card p { font-size: 16px; color: #5A5A5A; }
 
-        .servicos { background: #FFF; padding: 96px 0; padding-left: 40px; padding-right: 40px; height: 100vh; }
+        .servicos { background: #FFF; padding: 30px; padding-left: 40px; padding-right: 40px; height: auto; }
         .servicos-grid {
             display: grid; /* Alterado de flex para grid */
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: 1fr ;
             gap: 40px 32px;
             margin-top: 64px;
             width: 100%;
+            height: 70vh;
             margin-left: 0;
             margin-right: 0;
             justify-content: center;
+            
         }
         .servico-card {
             position: relative;
@@ -135,6 +169,7 @@
             transform: scale(0.95);
             display: flex;
             flex-direction: column;
+            border: solid #752F92 1px;
         }
         .servico-card.visible { animation: scaleIn 0.6s ease-out forwards; }
         @keyframes scaleIn { to { opacity: 1; transform: scale(1); } }
@@ -156,6 +191,7 @@
                 grid-row: auto;
             }
         }
+        .servico h2 { text-align: center; color: #752F92; }
         .servico-card:hover { transform: translateY(-4px); box-shadow: 0 12px 48px rgba(117,47,146,0.12); }
         .servico-image {
             position: relative;
@@ -188,7 +224,7 @@
             flex-direction: column;
             justify-content: center;
         }
-        .servico-content h3 { margin-bottom: 12px; font-size: 26px; }
+        .servico-content h3 { margin-bottom: 12px; font-size: 26px; color: #752F92; }
         .servico-content p { margin-bottom: 24px; color: #5A5A5A; font-size: 16px; }
         .servico-link { display: inline-flex; align-items: center; gap: 8px; color: #752F92; text-decoration: none; font-weight: 500; transition: gap 0.3s; }
         .servico-link:hover { gap: 12px; }
@@ -197,7 +233,7 @@
         .sobre { background: linear-gradient(135deg, #FAF9F7 0%, #FFF 100%); padding: 46px 0; border: 1px solid red; }
         .sobre-content { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
         @media (max-width: 768px) { .sobre-content { grid-template-columns: 1fr; gap: 32px; } }
-        .sobre-text h2 { font-weight: 700; margin-bottom: 24px; color: #752F92; font-size: 40px; }
+        .sobre-text h2 { font-weight: 700; margin-bottom: 24px; color: #752F92; font-size: 40px; font-family: 'headline', ; }
         .sobre-text p { margin-bottom: 20px; font-size: 20px; line-height: 1.8; }
         .sobre-text a { margin-bottom: 20px; font-size: 20px; line-height: 1.8; }
         .sobre-image { position: relative; }
@@ -492,7 +528,7 @@
                     <h2>Dra Emlyn L. S. Rosa - Fisioterapeuta</h2>
                     <p>Sou Fisioterapeuta por formação, mas principalmente por escolha de vida!</p>
                     <p>Fui acompanhar uma amiga em uma aula na faculdade e saí apaixonada sobre a forma como eles falavam sobre movimento, dor e cuidado.</p>
-                    <a>Eu lembro de pensar: “É isso — eu quero ajudar pessoas a se sentirem bem com o próprio corpo.”</a>
+                    <p>Eu lembro de pensar: “É isso — eu quero ajudar pessoas a se sentirem bem com o próprio corpo.”</p>
                     <p>Hoje sou pós-graduada em Estética e em Fisioterapia Neurofuncional, com formações em Pilates, Liberação Miofascial, Bandagem Funcional e outros cursos que me ajudam a olhar cada paciente como um todo — físico, emocional e humano.</p>
                     <p>Meu propósito?<br>
                     Ajudar pessoas a viverem com menos dor, mais qualidade de vida e mais conexão com o próprio corpo.<br>
@@ -514,7 +550,7 @@
         .sobre-mim-content {
             display: grid;
             grid-template-columns: 390px 1fr; /* fixo para imagem, flexível para texto */
-            gap: 194px; /* diminui o espaço entre img e texto */
+            gap: 124px; /* diminui o espaço entre img e texto */
             align-items: center;
         }
         .sobre-mim-img img {
@@ -540,7 +576,8 @@
             justify-content: center;
             margin-left: 0; /* remove margem extra */
             max-width: 100%;
-            gap: 16px;    
+            gap: 16px;
+            
         }
         .sobre-mim-text h2 {
             font-family: 'fonts/Montserrat-Bold.woff2';
@@ -551,9 +588,10 @@
         }
         .sobre-mim-text p {
             font-family: 'fonts/Montserrat-Regular.woff2';
-            font-size: 19px;
+            font-size: 16px;
             color: #fff;
-            line-height: 1.8;
+            line-height: 1.4;
+            font-weight: 200;
         }
         .sobre-mim-text a {
             color: #fff;
@@ -577,8 +615,8 @@
 
     <section class="servicos">
         <div class="servicos-interna">
-            <div class="section-title animate-on-scroll">
-                <h2>Nossos serviços</h2>
+            <div class="section-title animate-on-scroll" style="color: #752F92; font-family: 'fonts/CormorantSC-Bold.woff2', sans-serif; font-weight: 700; letter-spacing: 1px; margin-bottom: 1px;margin-top: 30px; font-size: 17px;">
+                <h2>NOSSOS SERVIÇOS</h2>
             </div>
             <div class="servicos-grid">
                 <div class="servico-card">
